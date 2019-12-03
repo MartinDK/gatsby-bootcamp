@@ -5,10 +5,10 @@ import headerStyles from './header.module.scss'
 
 const Header = () => {
   return (
-    <header>
-      <h1><Link to="/">GatsbyJS Bootcamp</Link></h1>
+    <header className={headerStyles.header}>
+      <h1><Link className={headerStyles.title} to="/">GatsbyJS Boot Camp</Link></h1>
       <nav>
-        <ul>
+        <ul className={headerStyles.navList}>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/contact">Contact</Link></li>
