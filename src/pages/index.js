@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Footer form '../components/footer'
+import Footer from '../components/footer'
 
 const IndexPage = () => {
   return (
