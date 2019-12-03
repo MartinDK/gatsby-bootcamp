@@ -1,11 +1,11 @@
-import React from "react"
-
+import React from 'react'
+import {Link} from 'gatsby'
 const AboutPage = () => {
   return (
     <div>
       <h1>About Page</h1>
-      <p>Hi, my name is Martin</p>
-      <p>I am a full stack developer</p>
+      <h2>Hi, my name is Martin</h2>
+      <p>Need a developer? <Link to="/contact">Contact me</Link></p>
     </div>
   )
 }
