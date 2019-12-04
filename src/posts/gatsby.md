@@ -5,15 +5,12 @@ date: "2019-04-04"
 
 I just launched a new bootcamp!
 
-![User](./lake-cancano.jpg)
+![User111](./lake-cancano.jpg)
 
-x
-x
+xx
+xx
 
-![User](./users-1.svg)
-
-x
-x
+![xxx](./users-1.svg)
 
 ![User](./users-2.svg)
 

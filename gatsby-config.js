@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
+        name: 'images',
+        path: `${__dirname}/src/posts`
       }
     },
     'gatsby-plugin-sharp',
@@ -17,12 +17,6 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
-            }
-          },
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
@@ -30,7 +24,8 @@ module.exports = {
               maxWidth: 750,
               linkImagesToOriginal: false
             }
-          }
+          },
+          'gatsby-remark-copy-images'
         ]
       }
     }
