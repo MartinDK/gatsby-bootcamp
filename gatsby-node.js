@@ -1,5 +1,11 @@
+// Code in the file gatsby-node.js is run once in the process of building your site. 
+// You can use it to create pages dynamically, add nodes in GraphQL, or respond to 
+// events during the build lifecycle.
+
 const path = require('path')
 
+
+// Generate a slug for each markdown post url
 module.exports.onCreateNode = ({node, actions}) => {
   const {createNodeField} = actions
 
