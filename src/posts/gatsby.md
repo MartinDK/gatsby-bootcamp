@@ -3,16 +3,15 @@ title: "The Great Gatsby Bootcamp"
 date: "2019-04-04"
 ---
 
+![acd](./lake-cancano.jpg)
+
 I just launched a new bootcamp!
 
-![User111](./lake-cancano.jpg)
+![a](./users-1.svg)
 
-xx
-xx
+![a](./users-2.svg)
 
-![xxx](./users-1.svg)
-
-![User](./users-2.svg)
+![a](./users-3.svg) 
 
 ## Topics Covered
 
