@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../layout'
 
+// YouTube explanation 2:53:16 https://youtu.be/8t0vNu2fCCM?t=10396
 export const query = graphql`
   query ($slug: String!) {
     markdownRemark (fields: { slug: { eq: $slug } }) {
