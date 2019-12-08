@@ -1,17 +1,14 @@
 ---
-title: "The Great Gatsby Bootcamp"
+title: "Gatsby Images"
 date: "2019-04-04"
 ---
+Gatsby requires a plugin to display images in markdown files.
 
-![acd](./lake-cancano.jpg)
+![Lake Cancano](./lake-cancano.jpg)
 
 I just launched a new bootcamp!
 
-![a](./users-1.svg)
-
-![a](./users-2.svg)
-
-![a](./users-3.svg) 
+![User](./users-1.svg)
 
 ## Topics Covered
 
