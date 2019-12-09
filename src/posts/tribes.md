@@ -3,7 +3,7 @@ title: "Tribes"
 date: "2019-12-09"
 type: "Blog"
 ---
-People belong to a tribe. In a tribe people work together with shared goals. Everyone doesn't belong to the same tribe.
+People belong to a tribe. In a tribe people work together with shared goals. Tribes working together form a Nation. Successful nations are able to integrate tribes to form a cohesive nation.
 - Tribes compete and work with each other.
 - Not all competition leads to conflict.
 - Healthy competition leads peaceful hierarchy and status.
