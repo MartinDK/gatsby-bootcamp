@@ -3,6 +3,12 @@ title: "Tribes"
 date: "2019-12-09"
 type: "Blog"
 ---
+People belong to a tribe. In a tribe people work together with shared goals. Everyone doesn't belong to the same tribe.
+- Tribes compete and work with each other.
+- Not all competition leads to conflict.
+- Healthy competition leads peaceful hierarchy and status.
+- Unhealthy competition leads to conflict.
+
 ### Questions
 - How is people's happiness created by their tribe/social group/identity?
 - How do rewards shape the tribe?
@@ -20,7 +26,7 @@ Not all relationships are tribal:
 
 ### Modern Tribes
 
-The workplace is the tribe people belong to in modern society. 
+The workplace forms the tribe in modern society. A stable workplace builds a strong tribe. When employment is unstable it weakens the tribe. Society is made up of many tribes.
 
 ### How do tribes choose their leader?
 
