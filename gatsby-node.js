@@ -10,7 +10,7 @@ module.exports.onCreateNode = ({node, actions}) => {
   const {createNodeField} = actions
 
   if (node.internal.type === 'MarkdownRemark') {
-    console.log(JSON.stringify(node.frontmatter, undefined, 2))
+    
     const slug = path.basename(node.fileAbsolutePath, '.md')
     createNodeField({
       node,
@@ -21,7 +21,7 @@ module.exports.onCreateNode = ({node, actions}) => {
     createNodeField({
       node,
       name: 'type',
-      value: node.frontmatter.type
+      value: node.frontmatter.type.toLowerCase()
     })
   }
 }
@@ -37,6 +37,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
+              type
             }
           }
         }
@@ -45,12 +46,25 @@ module.exports.createPages = async ({ graphql, actions }) => {
   `)
 
   res.data.allMarkdownRemark.edges.forEach((edge) => {
-    createPage({
-      component: blogTemplate,
-      path: `/blog/${edge.node.fields.slug}`,
-      context: {
-        slug: edge.node.fields.slug
-      }
-    })
+    if (edge.node.fields.type  === 'project') {
+      console.log(JSON.stringify(edge, undefined, 2))
+      createPage({
+        component: blogTemplate,
+        path: `/projects/${edge.node.fields.slug}`,
+        context: {
+          slug: edge.node.fields.slug
+        }
+      })
+
+    } else if (edge.node.fields.type === 'blog') {
+      createPage({
+        component: blogTemplate,
+        path: `/blog/${edge.node.fields.slug}`,
+        context: {
+          slug: edge.node.fields.slug
+        }
+      })
+    }
+
   })
 }
