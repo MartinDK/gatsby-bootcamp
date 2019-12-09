@@ -7,18 +7,20 @@ import blogStyles from './blog.module.scss'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-    	allMarkdownRemark(sort: {
-    		order: DESC,
-    		fields: [frontmatter___date]
-    	}) {
+    	allMarkdownRemark(
+    		sort: { order: DESC, fields: [frontmatter___date] }
+    		filter: { frontmatter: { type: { eq: "Blog" } } }
+    	) {
     		edges {
     			node {
     				frontmatter {
     					title
     					date
+    					type
     				}
     				fields {
     					slug
+    					type
     				}
     			}
     		}
