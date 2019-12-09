@@ -5,7 +5,7 @@
 const path = require('path')
 
 
-// Generate a slug for each markdown post url
+// Generate a slug for each markdown post url and add to node field
 module.exports.onCreateNode = ({node, actions}) => {
   const {createNodeField} = actions
 
@@ -19,6 +19,7 @@ module.exports.onCreateNode = ({node, actions}) => {
   }
 }
 
+// Create page for each markdown file
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogTemplate = path.resolve('./src/components/templates/blog.js')
