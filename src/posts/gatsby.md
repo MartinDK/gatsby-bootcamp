@@ -4,7 +4,7 @@ date: "2019-04-04"
 ---
 Gatsby requires a plugin to display images in markdown files.
 
-![Lake Cancano](./lake-cancano.jpg)
+![Lake Cancano](./gatsby-lake-cancano.jpg)
 
 I just launched a new bootcamp!
 
