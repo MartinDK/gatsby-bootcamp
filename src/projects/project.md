@@ -1,6 +1,7 @@
 ---
 title: "Project One"
 date: "2019-04-04"
+type: "Project"
 ---
 Gatsby requires a plugin to display images in markdown files.
 

@@ -1,6 +1,7 @@
 ---
 title: "Gatsby Images"
 date: "2019-04-04"
+type: "Blog"
 ---
 Gatsby requires a plugin to display images in markdown files.
 
