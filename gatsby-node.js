@@ -29,7 +29,7 @@ module.exports.onCreateNode = ({node, actions}) => {
 // Create page for each markdown file
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogTemplate = path.resolve('./src/components/templates/blog.js')
+  const pageTemplate = path.resolve('./src/components/templates/page.js')
   const res = await graphql(`
     query {
       allMarkdownRemark {
@@ -49,7 +49,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     if (edge.node.fields.type  === 'project') {
       console.log(JSON.stringify(edge, undefined, 2))
       createPage({
-        component: blogTemplate,
+        component: pageTemplate,
         path: `/projects/${edge.node.fields.slug}`,
         context: {
           slug: edge.node.fields.slug
@@ -58,7 +58,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
     } else if (edge.node.fields.type === 'blog') {
       createPage({
-        component: blogTemplate,
+        component: pageTemplate,
         path: `/blog/${edge.node.fields.slug}`,
         context: {
           slug: edge.node.fields.slug
