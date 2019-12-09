@@ -1,7 +1,7 @@
 ---
 title: "Learn Gatsby JS Bootcamp"
 date: "2019-12-09"
-type: "Project"
+type: "project"
 ---
 I have been learning GatsbyJS following this video tutorial:
 
