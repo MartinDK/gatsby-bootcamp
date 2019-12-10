@@ -1,17 +1,17 @@
 ---
-title: "Gatsby Images"
+title: "Markdown Images"
 date: "2019-04-04"
 type: "Blog"
 ---
 Gatsby requires a plugin to display images in markdown files.
 
-![Lake Cancano](./gatsby-lake-cancano.jpg)
+![Lake Cancano](./markdown-lake-cancano.jpg)
 
 I just launched a new bootcamp!
 
 ![User](./users-1.svg)
 
-## Topics Covered
+## Plugins for Gatsby Images in Markdown Files
 
 1. Gatsby
 2. GraphQL
