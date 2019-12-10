@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title:'GatsbyJS Bootcamp',
+    title:'MDK',
     author:'Martin'
   },
   plugins: [
