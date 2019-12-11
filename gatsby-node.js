@@ -47,7 +47,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   res.data.allMarkdownRemark.edges.forEach((edge) => {
     if (edge.node.fields.type  === 'project') {
-      console.log(JSON.stringify(edge, undefined, 2))
       createPage({
         component: pageTemplate,
         path: `/projects/${edge.node.fields.slug}`,
