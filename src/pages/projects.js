@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useStaticQuery, graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
+import Head from '../components/head'
 import projectStyles from './project.module.scss'
 
 const ProjectPage = () => {
@@ -30,6 +31,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
+      <Head title="Projects" />
       <h1>Projects</h1>
       <p>Things I'm currently working on.</p>
       <ol className={projectStyles.posts}>
