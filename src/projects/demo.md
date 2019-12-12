@@ -1,15 +1,15 @@
 ---
-title: "Project One"
+title: "Demo"
 date: "2019-04-04"
 type: "project"
 ---
 Gatsby requires a plugin to display images in markdown files.
 
-![Lake Cancano](./gatsby-lake-cancano.jpg)
+![Lake Cancano](./demo-lake-cancano.jpg)
 
 I just launched a new bootcamp!
 
-![User](./users-1.svg)
+![User](./demo-users-1.svg)
 
 ## Topics Covered
 
