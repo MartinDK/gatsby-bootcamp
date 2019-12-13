@@ -21,8 +21,10 @@ export const query = graphql`
 const Page = (props) => {
   return (
     <Layout>
-      <h1>{props.data.mdx.frontmatter.title}</h1>
-      <p>{props.data.mdx.frontmatter.date}</p>
+      <div className={pageStyles.pageTitle}>
+        <h1>{props.data.mdx.frontmatter.title}</h1>
+        <p>{props.data.mdx.frontmatter.date}</p>
+      </div>
       <div className={pageStyles.pageBody}>
         <MDXRenderer className={pageStyles.pageBody}>{props.data.mdx.body}</MDXRenderer>
       </div>
