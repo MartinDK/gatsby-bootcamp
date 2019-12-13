@@ -1,7 +1,17 @@
 
+.page-title {
+    background: #f1f1f1;
+    padding: .5rem 1rem .5rem;
+    margin-bottom: 3rem;
+
+    p {
+        margin-bottom: 0;
+    }
+}
 .page-body {
     color: #666666;
-    
+    padding-left: 1px;
+
     a {
         text-decoration: none;
         color: #333333;
