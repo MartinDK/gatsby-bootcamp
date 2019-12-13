@@ -8,7 +8,7 @@ import blogStyles from './blog.module.scss'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-    	allMarkdownRemark(
+    	allMdx(
     		sort: { order: DESC, fields: [frontmatter___date] }
     		filter: { frontmatter: { type: { eq: "Blog" } } }
     	) {
@@ -34,7 +34,7 @@ const BlogPage = () => {
       <Head title="Blog" />
       <h1>Blog</h1>
       <ol className={blogStyles.posts}>
-        {data.allMarkdownRemark.edges.map((edge) => {
+        {data.allMdx.edges.map((edge) => {
           return (
             <li key={edge.node.fields.slug} className={blogStyles.post}>
               <Link to={`/blog/${edge.node.fields.slug}`}>

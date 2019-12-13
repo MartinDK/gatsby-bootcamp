@@ -8,7 +8,7 @@ import projectStyles from './project.module.scss'
 const ProjectPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark (
+      allMdx (
         sort: {order: DESC, fields: [frontmatter___date]}
         filter: {frontmatter: {type: {eq: "project"}}}
       ) {
@@ -35,7 +35,7 @@ const ProjectPage = () => {
       <h1>Projects</h1>
       <p>Things I'm currently working on.</p>
       <ol className={projectStyles.posts}>
-        {data.allMarkdownRemark.edges.map((edge) => {
+        {data.allMdx.edges.map((edge) => {
           return (
             <li key={edge.node.fields.slug} className={projectStyles.post}>
               <Link to={`/projects/${edge.node.fields.slug}`}>

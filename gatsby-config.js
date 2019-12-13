@@ -22,9 +22,10 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
@@ -34,8 +35,8 @@ module.exports = {
             }
           },
           'gatsby-remark-copy-images'
-        ]
-      }
-    }
-  ]
+        ],
+      },
+    },
+  ],
 }
