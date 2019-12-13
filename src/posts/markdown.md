@@ -5,11 +5,11 @@ type: "Blog"
 ---
 Gatsby requires a plugin to display images in markdown files.
 
-![Lake Cancano](./markdown-lake-cancano.jpg)
+![Lake Cancano](./images/markdown-lake-cancano.jpg)
 
 I just launched a new bootcamp!
 
-![User](./users-1.svg)
+![User](./images/users-1.svg)
 
 ## Plugins for Gatsby Images in Markdown Files
 

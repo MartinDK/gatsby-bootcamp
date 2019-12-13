@@ -17,7 +17,7 @@ Complete the [Three Peaks Challenge 2020](https://www.bicyclenetwork.com.au/ride
 
 On <u>8th March 2020</u> in **<DateCountdown />** days.
 
-![Three Peaks 2020](./three-peaks-2020.jpg)
+![Three Peaks 2020](./images/three-peaks-2020.jpg)
 
 Total Distance 235km
 
