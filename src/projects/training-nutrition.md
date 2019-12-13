@@ -5,7 +5,7 @@ type: "project"
 ---
 import DateCountdown from '../components/templates/dateCountdown.js'
 
-This is where I document my training and nutrition program.
+This is where I document my training and nutrition.
 
 ## Training
 My goal is to improve my endurance.
@@ -13,9 +13,9 @@ My goal is to improve my endurance.
 ### Cycling
 
 #### Goal
-Ride [Three Peaks Challenge 2020](https://www.bicyclenetwork.com.au/rides-and-events/peaks-challenge/) in under **10 hours**.
+Complete the [Three Peaks Challenge 2020](https://www.bicyclenetwork.com.au/rides-and-events/peaks-challenge/) in under **10 hours**.
 
-Date: <u>8th March 2020</u> <DateCountdown />
+On <u>8th March 2020</u> in **<DateCountdown />** days.
 
 ![Three Peaks 2020](./three-peaks-2020.jpg)
 

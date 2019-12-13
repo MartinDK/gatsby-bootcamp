@@ -12,7 +12,7 @@ import React from "react";
 const DateCountdown = () => {
     return (
 
-            <span>in {Math.round(Difference_In_Days)} days</span>
+            <span>{Math.round(Difference_In_Days)}</span>
 
     )
 }
