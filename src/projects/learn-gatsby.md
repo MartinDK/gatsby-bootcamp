@@ -2,6 +2,7 @@
 title: "Learn Gatsby JS"
 date: "2019-12-09"
 type: "project"
+tags: ["project","code","gatsby","react"]
 ---
 I have been learning GatsbyJS from Andrew Mead's tutorial [Gatsby JS - The Great Gatsby Bootcamp [Adrew Mead]](https://youtu.be/8t0vNu2fCCM?t=9200).
 

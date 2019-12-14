@@ -12,6 +12,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        tags
       }
       body
     }
@@ -19,10 +20,13 @@ export const query = graphql`
 `
 
 const Page = (props) => {
+
+  console.log("xxxxxxxx" + props.data.mdx.frontmatter.tags)
   return (
     <Layout>
       <div className={pageStyles.pageTitle}>
         <h1>{props.data.mdx.frontmatter.title}</h1>
+        <p className={pageStyles.tags}>{props.data.mdx.frontmatter.tags.toString().replace(/,/gi,", ")}</p>
         <p>{props.data.mdx.frontmatter.date}</p>
       </div>
       <div className={pageStyles.pageBody}>
