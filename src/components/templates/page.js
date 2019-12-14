@@ -20,8 +20,6 @@ export const query = graphql`
 `
 
 const Page = (props) => {
-
-  console.log("xxxxxxxx" + props.data.mdx.frontmatter.tags)
   return (
     <Layout>
       <div className={pageStyles.pageTitle}>
