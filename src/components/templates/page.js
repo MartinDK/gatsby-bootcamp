@@ -20,11 +20,19 @@ export const query = graphql`
 `
 
 const Page = (props) => {
+
+  let tags = ""
+
+  if (props.data.mdx.frontmatter.tags) {
+    tags = props.data.mdx.frontmatter.tags.toString().replace(/,/gi, ", ")
+  }
+
+
   return (
     <Layout>
       <div className={pageStyles.pageTitle}>
         <h1>{props.data.mdx.frontmatter.title}</h1>
-        <p className={pageStyles.tags}>{props.data.mdx.frontmatter.tags.toString().replace(/,/gi,", ")}</p>
+        <p className={pageStyles.tags}>{tags}</p>
         <p>{props.data.mdx.frontmatter.date}</p>
       </div>
       <div className={pageStyles.pageBody}>
