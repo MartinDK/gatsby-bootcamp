@@ -2,6 +2,7 @@
 title: "Tribes"
 date: "2019-12-09"
 type: "Blog"
+tags: ["blog","notes","social"]
 ---
 People belong to a tribe. In a tribe people work together with shared goals. Tribes working together form a Nation. Successful nations are able to integrate tribes to form a cohesive nation.
 - Tribes compete and work with each other.

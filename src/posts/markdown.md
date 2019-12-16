@@ -2,6 +2,7 @@
 title: "Markdown Images"
 date: "2019-04-04"
 type: "Blog"
+tags: ["blog","code"]
 ---
 Gatsby requires a plugin to display images in markdown files.
 
