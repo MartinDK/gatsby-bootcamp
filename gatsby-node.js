@@ -11,7 +11,7 @@ module.exports.onCreateNode = ({node, actions}) => {
 
   if (node.internal.type === 'Mdx') {
     
-    const slug = path.basename(node.fileAbsolutePath, '.md')
+    const slug = path.basename(node.fileAbsolutePath, '.mdx')
     createNodeField({
       node,
       name: 'slug',
@@ -30,6 +30,7 @@ module.exports.onCreateNode = ({node, actions}) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const pageTemplate = path.resolve('./src/components/templates/page.js')
+  const tagTemplate = path.resolve("./src/components/templates/tags.js")
   const res = await graphql(`
     query {
       allMdx {
@@ -40,6 +41,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
               type
             }
           }
+        }
+      }
+      tagsGroup: allMdx(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -64,6 +70,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       })
     }
+  })
 
+  // Extract tag data from query
+  res.data.tagsGroup.group.forEach(tag => {
+  	createPage({
+  		path: `/tags/${tag.fieldValue}/`,
+  		component: tagTemplate,
+  		context: {
+  			tag: tag.fieldValue,
+  		},
+  	})
   })
 }
