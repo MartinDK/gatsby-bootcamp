@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
 
     <Layout>
       <Head title={tag}/>
-      <h1>{tagHeader}..</h1>
+      <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields
