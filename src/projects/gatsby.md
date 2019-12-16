@@ -1,5 +1,5 @@
 ---
-title: "Learn Gatsby JS"
+title: "GatsbyJS - Website"
 date: "2019-12-09"
 type: "project"
 tags: ["project","code","gatsby","react"]
