@@ -9,7 +9,7 @@ const IndexPage = () => {
     <Layout>
       <Head title="Home" />
       <h1>Hello.</h1>
-      <h2>Gatsby.JS Bootcamp Tutorial by Andrew Meade</h2>
+      <h2>The personal blog of MDK.</h2>
     </Layout>
   )
 }
