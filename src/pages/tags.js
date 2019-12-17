@@ -6,6 +6,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import tagStyles from "./tags.module.scss"
 
 
 const TagsPage = ({
@@ -16,11 +17,11 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout>
+  <Layout >
     <Head title="Tags" />
     <div>
       <h1>Tags</h1>
-      <ul>
+      <ul className={tagStyles.tags}>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${tag.fieldValue}/`}>

@@ -6,6 +6,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../layout"
 import Head from "../head"
+import tagStyles from "./tags.module.scss"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -16,10 +17,10 @@ const Tags = ({ pageContext, data }) => {
 
   return (
 
-    <Layout>
+    <Layout className={tagStyles.body}>
       <Head title={tag}/>
       <h1>{tagHeader}</h1>
-      <ul>
+      <ul className={tagStyles.tags}>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { type } = node.fields
