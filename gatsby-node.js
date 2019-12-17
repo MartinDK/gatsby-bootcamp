@@ -55,7 +55,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     if (edge.node.fields.type  === 'project') {
       createPage({
         component: pageTemplate,
-        path: `/projects/${edge.node.fields.slug}`,
+        path: `/project/${edge.node.fields.slug}`,
         context: {
           slug: edge.node.fields.slug
         }

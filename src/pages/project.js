@@ -38,7 +38,7 @@ const ProjectPage = () => {
         {data.allMdx.edges.map((edge) => {
           return (
             <li key={edge.node.fields.slug} className={projectStyles.post}>
-              <Link to={`/projects/${edge.node.fields.slug}`}>
+              <Link to={`/project/${edge.node.fields.slug}`}>
                 <h2>{edge.node.frontmatter.title}</h2>
                 <p>{edge.node.frontmatter.date}</p>
               </Link>
