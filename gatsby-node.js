@@ -12,6 +12,12 @@ module.exports.onCreateNode = ({node, actions}) => {
   if (node.internal.type === 'Mdx') {
     
     const slug = path.basename(node.fileAbsolutePath, '.mdx')
+
+    // Find current directory
+    const paths = node.fileAbsolutePath.split(path.sep)
+    const pathCurrent = paths[paths.length - 2]
+    console.log(paths[pathCurrent])
+
     createNodeField({
       node,
       name: 'slug',
@@ -21,7 +27,7 @@ module.exports.onCreateNode = ({node, actions}) => {
     createNodeField({
       node,
       name: 'type',
-      value: node.frontmatter.type.toLowerCase()
+      value: pathCurrent
     })
   }
 }

@@ -10,14 +10,13 @@ const ProjectPage = () => {
     query {
       allMdx (
         sort: {order: DESC, fields: [frontmatter___date]}
-        filter: {frontmatter: {type: {eq: "project"}}}
+        filter: {fields: {type: {eq: "project"}}}
       ) {
         edges {
           node {
             frontmatter {
               title
               date
-              type
             }
             fields {
               slug
