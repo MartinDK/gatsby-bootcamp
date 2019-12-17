@@ -1,9 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../layout'
-import TagsList from './taglist'
 import pageStyles from './page.module.scss'
 
 // YouTube explanation 2:53:16 https://youtu.be/8t0vNu2fCCM?t=10396
@@ -25,7 +24,9 @@ const Page = (props) => {
   let tags = ""
 
   if (props.data.mdx.frontmatter.tags) {
-    tags = props.data.mdx.frontmatter.tags.toString().replace(/,/gi, ", ")
+    tags = props.data.mdx.frontmatter.tags.map( (tag) => 
+      <span><Link to={`/tags/${tag}`}>{tag}</Link> </span>
+    )
   }
 
 
@@ -35,7 +36,6 @@ const Page = (props) => {
         <h1>{props.data.mdx.frontmatter.title}</h1>
         <p className={pageStyles.tags}>{tags}</p>
         <p>{props.data.mdx.frontmatter.date}</p>
-        <TagsList title={props.data.mdx.frontmatter.title}/>
       </div>
       <div className={pageStyles.pageBody}>
         <MDXRenderer className={pageStyles.pageBody}>{props.data.mdx.body}</MDXRenderer>
