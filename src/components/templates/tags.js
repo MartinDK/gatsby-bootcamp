@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 
 // Components
 import { Link, graphql } from "gatsby"
@@ -26,7 +26,7 @@ const Tags = ({ pageContext, data }) => {
           const { title } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={`${type}s/${slug}`}>{title}</Link>
+              <Link to={`${type}/${slug}`}>{title}</Link>
             </li>
           )
         })}
@@ -40,28 +40,28 @@ const Tags = ({ pageContext, data }) => {
   )
 }
 
-Tags.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-  }),
-  data: PropTypes.shape({
-    allMdx: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
-}
+// Tags.propTypes = {
+//   pageContext: PropTypes.shape({
+//     tag: PropTypes.string.isRequired,
+//   }),
+//   data: PropTypes.shape({
+//     allMdx: PropTypes.shape({
+//       totalCount: PropTypes.number.isRequired,
+//       edges: PropTypes.arrayOf(
+//         PropTypes.shape({
+//           node: PropTypes.shape({
+//             frontmatter: PropTypes.shape({
+//               title: PropTypes.string.isRequired,
+//             }),
+//             fields: PropTypes.shape({
+//               slug: PropTypes.string.isRequired,
+//             }),
+//           }),
+//         }).isRequired
+//       ),
+//     }),
+//   }),
+// }
 
 export default Tags
 
