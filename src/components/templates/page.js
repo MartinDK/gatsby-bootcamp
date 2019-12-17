@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../layout'
@@ -24,7 +24,9 @@ const Page = (props) => {
   let tags = ""
 
   if (props.data.mdx.frontmatter.tags) {
-    tags = props.data.mdx.frontmatter.tags.toString().replace(/,/gi, ", ")
+    tags = props.data.mdx.frontmatter.tags.map( (tag) => 
+      <span><Link to={`/tags/${tag}`}>{tag}</Link> </span>
+    )
   }
 
 
