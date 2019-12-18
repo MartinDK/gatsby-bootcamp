@@ -1,6 +1,17 @@
 @import './reset';
 @import './markdown';
 
+h1,
+h2,
+h3 {
+    font-family: 'Saira', sans-serif;
+}
+
+h2,
+h3 {
+    font-weight: 500;
+}
+
 a {
     color: #333333;
 }

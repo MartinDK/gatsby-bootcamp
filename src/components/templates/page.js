@@ -25,7 +25,7 @@ const Page = (props) => {
 
   if (props.data.mdx.frontmatter.tags) {
     tags = props.data.mdx.frontmatter.tags.map( (tag) => 
-      <span><Link to={`/tags/${tag}`}>{tag}</Link> </span>
+      <span key={tag}><Link to={`/tags/${tag}`}>{tag}</Link> </span>
     )
   }
 

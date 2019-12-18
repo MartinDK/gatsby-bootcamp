@@ -9,10 +9,7 @@ import tagStyles from "./tags.module.scss"
 
 const TagsPage = ({
   data: {
-    allMdx: { group },
-    site: {
-      siteMetadata: { title },
-    },
+    allMdx: { group }
   },
 }) => (
   <Layout >
@@ -22,8 +19,8 @@ const TagsPage = ({
       <ul className={tagStyles.tags}>
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <Link to={`/tags/${tag.fieldValue}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+            <Link to={`/tags/${tag.fieldValue}/`} className={tagStyles.link}>
+              {tag.fieldValue} [{tag.totalCount}]
             </Link>
           </li>
         ))}
