@@ -1,31 +1,24 @@
 .tags {
-
-    // a {
-    //     text-decoration: none;
-    //     border-bottom: rgba($color: #666666, $alpha: .5) solid 3px;
-    // }
-
-    width: 500px;
     margin: 0 auto;
-    background-color: #fafafa;
     padding: 50px;
-    box-shadow: 0 0 30px 30px #000;
     border-radius: 10px;
     font-size: 16px;
     line-height: 26px;
 }
 
-.link {
+a.link {
 	/* RESET */
-	text-decoration: none;
-	line-height: 1;
+    text-decoration: none;
+    border-bottom: none;
+    line-height: 1;
 
 	position: relative;
 	z-index: 0;
 	display: inline-block;
 	padding: 5px 5px;
 	overflow: hidden;
-	color: #333;
+    color: #666666;
+    font-weight: 800;
 	vertical-align: bottom;
 	transition: color .3s ease-out;
 }
@@ -36,10 +29,10 @@
 	z-index: -1;
 	top: 0;
 	left: 0;
-	transform: translateY(calc(100% - 2px));
+	transform: translateY(calc(100% - 5px));
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+	background-image: linear-gradient(60deg, #64b3f4 0%, #f1f1f1 100%);
 	transition: transform .25s ease-out;
 }
 
