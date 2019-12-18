@@ -6,8 +6,8 @@ import Layout from '../layout'
 import Head from '../head'
 
 import pageStyles from './page.module.scss'
+import TagsList from './taglist'
 
-// YouTube explanation 2:53:16 https://youtu.be/8t0vNu2fCCM?t=10396
 export const query = graphql`
   query ($slug: String!) {
     mdx (fields: { slug: { eq: $slug } }) {
@@ -23,21 +23,12 @@ export const query = graphql`
 
 const Page = (props) => {
 
-  let tags = ""
-
-  if (props.data.mdx.frontmatter.tags) {
-    tags = props.data.mdx.frontmatter.tags.map( (tag) => 
-      <span key={tag}><Link to={`/tags/${tag}`}>{tag}</Link> </span>
-    )
-  }
-
-
   return (
     <Layout>
       <Head />  
       <div className={pageStyles.pageTitle}>
         <h1>{props.data.mdx.frontmatter.title}</h1>
-        <p className={pageStyles.tags}>{tags}</p>
+        <TagsList tagsArray={props.data.mdx.frontmatter.tags} />
         <p>{props.data.mdx.frontmatter.date}</p>
       </div>
       <div className={pageStyles.pageBody}>

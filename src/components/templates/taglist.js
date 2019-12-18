@@ -1,26 +1,16 @@
 import React from 'react'
-import {useStaticQuery, graphql} from 'gatsby'
+import { Link } from 'gatsby'
 
-const TagsList = (title) => {
-  
-  const data = useStaticQuery(graphql`
-    query {
-      mdx(frontmatter: {
-        title: {
-          eq: "Nutrition"
-        }
-      }) {
-        frontmatter {
-          tags
-        }
-      }
-    }
-  `)
-  return (
-    <footer>
-      <p>tagss: {data.mdx.frontmatter.tags}</p>
-    </footer>
-  )
+const TagList = (props) => {
+ 
+  let tags = ""
+
+  if (props.tagsArray) {
+    tags = props.tagsArray.map( tag => 
+      <span key={tag}><Link to={`/tags/${tag}`}>{tag}</Link> </span>
+    )
+  }
+  return (tags)
 }
 
-export default TagsList
+export default TagList
