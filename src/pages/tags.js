@@ -11,10 +11,7 @@ import tagStyles from "./tags.module.scss"
 
 const TagsPage = ({
   data: {
-    allMdx: { group },
-    site: {
-      siteMetadata: { title },
-    },
+    allMdx: { group }
   },
 }) => (
   <Layout >
@@ -25,7 +22,7 @@ const TagsPage = ({
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${tag.fieldValue}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+              {tag.fieldValue} [{tag.totalCount}]
             </Link>
           </li>
         ))}
@@ -33,24 +30,6 @@ const TagsPage = ({
     </div>
   </Layout>
 )
-
-// TagsPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMdx: PropTypes.shape({
-//       group: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           fieldValue: PropTypes.string.isRequired,
-//           totalCount: PropTypes.number.isRequired,
-//         }).isRequired
-//       ),
-//     }),
-//     site: PropTypes.shape({
-//       siteMetadata: PropTypes.shape({
-//         title: PropTypes.string.isRequired,
-//       }),
-//     }),
-//   }),
-// }
 
 export default TagsPage
 
