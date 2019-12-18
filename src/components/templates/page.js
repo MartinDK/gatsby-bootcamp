@@ -3,6 +3,8 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../layout'
+import Head from '../head'
+
 import pageStyles from './page.module.scss'
 
 // YouTube explanation 2:53:16 https://youtu.be/8t0vNu2fCCM?t=10396
@@ -32,6 +34,7 @@ const Page = (props) => {
 
   return (
     <Layout>
+      <Head />  
       <div className={pageStyles.pageTitle}>
         <h1>{props.data.mdx.frontmatter.title}</h1>
         <p className={pageStyles.tags}>{tags}</p>
