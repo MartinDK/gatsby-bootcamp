@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../layout"
 import Head from "../head"
-import tagStyles from "./tags.module.scss"
+import tagStyles from "../../pages/tags.module.scss"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -25,12 +25,12 @@ const Tags = ({ pageContext, data }) => {
           const { title } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={`${type}/${slug}`}>{title}</Link>
+              <Link to={`${type}/${slug}`} className={tagStyles.link}>{title}</Link>
             </li>
           )
         })}
       </ul>
-      <Link to="/tags">All tags</Link>
+      <Link to="/tags" className={tagStyles.link}>All tags</Link>
     </Layout>
   )
 }
