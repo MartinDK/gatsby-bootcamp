@@ -8,16 +8,17 @@ import Head from "../head"
 import tagStyles from "../../pages/tags.module.scss"
 
 const Tags = ({ pageContext, data }) => {
+  
   const { tag } = pageContext
   const { edges, totalCount } = data.allMdx
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  } tagged with`
 
   return (
     <Layout className={tagStyles.body}>
       <Head title={tag}/>
-      <h1>{tagHeader}</h1>
+      <h1 className={tagStyles.header}>{tagHeader} <span className={tagStyles.tagName}>{tag}</span></h1>
       <ul className={tagStyles.tags}>
         {edges.map(({ node }) => {
           const { slug } = node.fields
