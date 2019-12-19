@@ -9,7 +9,11 @@ const TagList = (props) => {
 
   if (props.tagsArray) {
     tags = props.tagsArray.map( tag => 
-      <span key={tag}><Link to={`/tags/${tag}`} className={tagListStyles.link}>{tag}</Link> </span>
+      <span key={tag}>
+        <Link to={`/tags/${tag}`} className={tagListStyles.link}>
+          {tag}
+        </Link>
+      </span>
     )
   }
   return (tags)
