@@ -30,7 +30,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <Head title="Projects" />
+      <Head title="Project" />
       <h1>Projects</h1>
       <p>Things I'm currently working on.</p>
       <ol className={projectStyles.posts}>
