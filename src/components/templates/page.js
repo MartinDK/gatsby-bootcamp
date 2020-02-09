@@ -25,7 +25,7 @@ const Page = (props) => {
 
   return (
     <Layout>
-      <Head />  
+      <Head title={props.data.mdx.frontmatter.title}/>
       <div className={pageStyles.pageTitle}>
         <h1>{props.data.mdx.frontmatter.title}</h1>
         <div className={pageStyles.tagDateContainer}>
