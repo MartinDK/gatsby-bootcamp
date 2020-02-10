@@ -1,4 +1,4 @@
-@import '../styles/tag-links';
+@import '../styles/links';
 
 .tags {
     margin: 0 auto;
@@ -6,6 +6,8 @@
     border-radius: 10px;
     font-size: 16px;
     line-height: 26px;
+    
+    @include links;
 }
 
 .header {
