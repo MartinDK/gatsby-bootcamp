@@ -1,25 +1,6 @@
-.page-title {
-    background: #f1f1f1;
-    padding: .5rem 1rem .5rem;
-    margin-bottom: 3rem;
+// Styling for links
 
-    p {
-        margin-bottom: 0;
-    }
-    p.tags {
-        color: #2082ca;
-    }
-}
-.page-body {
-    color: #666666;
-    padding-left: 1px;
-
-    span>img {
-        position: absolute;
-        top: 0;
-    }
-
-    // Styling for links
+@mixin links {
     a {
         /* RESET */
         text-decoration: none;
@@ -60,16 +41,3 @@
         transition: transform .25s ease-out;
     }
 }
-
-.tag-date-container {
-    display: flex;
-
-    .date {
-        flex: 1 0;
-        font-family: 'Saira';
-        font-size: 0.9rem;
-        text-align: right;
-        color: #666666;
-    }
-}
-
