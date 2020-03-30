@@ -1,11 +1,13 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../layout'
+import Head from '../head'
+import TagsList from './tag-list';
+
 import pageStyles from './page.module.scss'
 
-// YouTube explanation 2:53:16 https://youtu.be/8t0vNu2fCCM?t=10396
 export const query = graphql`
   query ($slug: String!) {
     mdx (fields: { slug: { eq: $slug } }) {
@@ -21,21 +23,15 @@ export const query = graphql`
 
 const Page = (props) => {
 
-  let tags = ""
-
-  if (props.data.mdx.frontmatter.tags) {
-    tags = props.data.mdx.frontmatter.tags.map( (tag) => 
-      <span><Link to={`/tags/${tag}`}>{tag}</Link> </span>
-    )
-  }
-
-
   return (
     <Layout>
+      <Head title={props.data.mdx.frontmatter.title}/>
       <div className={pageStyles.pageTitle}>
         <h1>{props.data.mdx.frontmatter.title}</h1>
-        <p className={pageStyles.tags}>{tags}</p>
-        <p>{props.data.mdx.frontmatter.date}</p>
+        <div className={pageStyles.tagDateContainer}>
+          <TagsList tagsArray={props.data.mdx.frontmatter.tags} />
+          <span className={pageStyles.date}>{props.data.mdx.frontmatter.date}</span>
+        </div>
       </div>
       <div className={pageStyles.pageBody}>
         <MDXRenderer className={pageStyles.pageBody}>{props.data.mdx.body}</MDXRenderer>

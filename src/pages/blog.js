@@ -10,14 +10,13 @@ const BlogPage = () => {
     query {
     	allMdx(
     		sort: { order: DESC, fields: [frontmatter___date] }
-    		filter: { frontmatter: { type: { eq: "Blog" } } }
+    		filter: { fields: { type: { eq: "blog" } } }
     	) {
     		edges {
     			node {
     				frontmatter {
     					title
     					date
-    					type
     				}
     				fields {
     					slug

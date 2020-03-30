@@ -1,7 +1,18 @@
-.tags {
+@import '../styles/links';
 
-    a {
-        text-decoration: none;
-        border-bottom: rgba($color: #666666, $alpha: .5) solid 3px;
-    }
+.tags {
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    
+    @include links;
+}
+
+.header {
+    color: #333333;
+}
+.tag-name {
+    color: #666666;
 }

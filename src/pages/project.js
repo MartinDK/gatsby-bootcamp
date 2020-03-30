@@ -10,14 +10,13 @@ const ProjectPage = () => {
     query {
       allMdx (
         sort: {order: DESC, fields: [frontmatter___date]}
-        filter: {frontmatter: {type: {eq: "project"}}}
+        filter: {fields: {type: {eq: "project"}}}
       ) {
         edges {
           node {
             frontmatter {
               title
               date
-              type
             }
             fields {
               slug
@@ -31,7 +30,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <Head title="Projects" />
+      <Head title="Project" />
       <h1>Projects</h1>
       <p>Things I'm currently working on.</p>
       <ol className={projectStyles.posts}>
