@@ -1,7 +1,7 @@
 .page-title {
     background: #f1f1f1;
-    padding: .5rem 1rem .5rem;
-    margin-bottom: 3rem;
+    padding: .5em 1em .5em;
+    margin-bottom: 3em;
 
     p {
         margin-bottom: 0;
@@ -9,10 +9,22 @@
     p.tags {
         color: #2082ca;
     }
+    
+    @media all and (max-width: 480px) {
+        padding: .5em;
+    }
 }
 .page-body {
     color: #666666;
     padding-left: 1px;
+
+    @media all and (max-width: 480px) {
+        font-size: .9em;
+
+        h2 {
+            font-size: 1.6em;
+        }
+    }
 
     span>img {
         position: absolute;
@@ -63,13 +75,21 @@
 
 .tag-date-container {
     display: flex;
+    flex-wrap: wrap;
 
     .date {
-        flex: 1 0;
+        flex-grow: 1;
+        width: fit-content;
         font-family: 'Saira';
-        font-size: 0.9rem;
+        font-size: 0.9em;
         text-align: right;
         color: #666666;
+
+        @media all and (max-width: 480px) {
+            padding: .5em;
+            line-height: 1.1;
+            font-size: 0.8em;
+        }
     }
 }
 
