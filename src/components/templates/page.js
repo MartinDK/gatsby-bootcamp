@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../layout'
 import Head from '../head'
-import TagsList from './tag-list';
+import TagsList from './tag-list'
 
 import pageStyles from './page.module.scss'
 
