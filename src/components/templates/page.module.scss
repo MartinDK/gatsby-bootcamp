@@ -18,6 +18,14 @@
     color: #666666;
     padding-left: 1px;
 
+    @media all and (max-width: 480px) {
+        font-size: .9em;
+
+        h2 {
+            font-size: 1.6em;
+        }
+    }
+
     span>img {
         position: absolute;
         top: 0;

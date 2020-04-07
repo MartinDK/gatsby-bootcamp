@@ -18,6 +18,10 @@
     }
     h2 {
         margin-bottom: 0;
+
+        @media all and (max-width: 480px) {
+            font-size: 1.6em;
+        }
     }
     p {
         color: #777777;
