@@ -1,2 +1,2 @@
 # gatsby-bootcamp
-Coded from following Andrew Meade GatsbyJS tutorial.
+Coded following Andrew Meade GatsbyJS tutorial.

@@ -12,8 +12,7 @@ const AboutPage = () => {
       <div className={aboutStyles.aboutPage}>
         <h1>About Page</h1>
         <h2>Hi, my name is Martin</h2>
-        <p>I am a front end developer.</p>
-        <p>Need a developer? <Link to="/contact">Contact me</Link></p>
+        <p>I work as a front end web developer. When I am not coding I enjoy training for cycling events.</p>
       </div>
     </Layout>
   )
