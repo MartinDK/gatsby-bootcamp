@@ -1,9 +1,9 @@
-import React from 'react'
-import {Link} from 'gatsby'
+import React from "react"
+// import {Link} from 'gatsby'
 
-import Layout from '../components/layout'
-import Head from '../components/head'
-import aboutStyles from './about.module.scss'
+import Layout from "../components/layout"
+import Head from "../components/head"
+import aboutStyles from "./about.module.scss"
 
 const AboutPage = () => {
   return (
@@ -12,7 +12,10 @@ const AboutPage = () => {
       <div className={aboutStyles.aboutPage}>
         <h1>About Page</h1>
         <h2>Hi, my name is Martin</h2>
-        <p>I work as a front end web developer. When I am not coding I enjoy training for cycling events.</p>
+        <p>
+          I work as a front end web developer. When I am not coding I enjoy
+          training for cycling events.
+        </p>
       </div>
     </Layout>
   )

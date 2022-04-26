@@ -1,31 +1,70 @@
+// styles of blog page
+
 .posts {
-    list-style-type: none;
-    margin: 0;
+  list-style-type: none;
+  margin: 0;
 }
 
 .post {
-    margin: 1rem 0;
+  margin: 1rem 0;
+  outline: solid red 5px;
 
-    a {
-        background: #f4f4f4;
-        display: block;
-        padding: 1rem;
-        text-decoration: none;
-        border-bottom: none;
-    }
-    a:hover {
-        background: #e4e4e4;
-    }
-    h2 {
-        margin-bottom: 0;
+  a {
+    background: #f4f4f4;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  a:hover {
+    background: #e4e4e4;
+  }
+  h2 {
+    margin-bottom: 0;
 
-        @media all and (max-width: 480px) {
-            font-size: 1.6em;
-        }
+    @media all and (max-width: 480px) {
+      font-size: 1.6em;
     }
-    p {
-        color: #777777;
-        font-size: .8rem;
-        font-style: italic;
-    }
+  }
+  p {
+    color: #777777;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}
+
+// styles on individual post
+li {
+  list-style: square;
+}
+table {
+  margin-block: 0.5rem 1rem;
+}
+thead,
+tr,
+th,
+td {
+  width: unset;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: monospace;
+  text-align: left;
+}
+thead {
+  background-color: #e4e4e4;
+  th {
+    width: 90px;
+  }
+}
+tbody {
+  // border: none;
+
+  tr:nth-child(2n + 1) {
+    background-color: rgb(245, 245, 245);
+  }
+  td:first-child {
+    text-align: left;
+    width: 160px;
+  }
 }
