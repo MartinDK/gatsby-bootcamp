@@ -29,6 +29,10 @@
     margin-top: 1.5rem;
   }
 
+  li {
+    list-style: square;
+  }
+
   @media all and (max-width: 480px) {
     font-size: 0.9em;
 

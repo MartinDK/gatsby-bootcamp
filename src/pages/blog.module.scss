@@ -3,11 +3,14 @@
 .posts {
   list-style-type: none;
   margin: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
 .post {
   margin: 1rem 0;
-  outline: solid red 5px;
 
   a {
     background: #f4f4f4;
